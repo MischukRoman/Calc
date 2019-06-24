@@ -1,50 +1,19 @@
-var num1, num2, result;
 
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
+function insert(num) {
+  document.form.textview.value = document.form.textview.value+num;
 }
 
-function getNum() {
-  num1 = document.getElementById("inp1").value;
-  num2 = document.getElementById("inp2").value;
+function equal() {
+  var exp = document.form.textview.value;
+  if (exp) {
+  	document.form.textview.value = eval(exp);
+  }
 }
 
-function plus() {
-	getNum();
-	if ( isNumeric(num1) && isNumeric(num2) ) {
-		result = +num1 + +num2;;
-	} else {
-		result = "Not a number";
-	}
-	document.getElementById('out').innerHTML = result;
+function clean() {
+  	document.form.textview.value = "";
 }
-
-function minus() {
-	getNum();
-	if ( isNumeric(num1) && isNumeric(num2) ) {
-		result = +num1 - +num2;
-	} else {
-		result = "Not a number";
-	}
-	document.getElementById('out').innerHTML = result;
-}
-
-function deducted() {
-	getNum();
-	if ( isNumeric(num1) && isNumeric(num2) ) {
-		result = +num1 * +num2;
-	} else {
-		result = "Not a number";
-	}
-	document.getElementById('out').innerHTML = result;
-}
-
-function del() {
-	getNum();
-	if ( isNumeric(num1) && isNumeric(num2) ) {
-		result = +num1 / +num2;
-	} else {
-		result = "Not a number";
-	}
-	document.getElementById('out').innerHTML = result;
+function backspace() {
+	var exp = document.form.textview.value;
+	document.form.textview.value = exp.substring(0, exp.length - 1);
 }

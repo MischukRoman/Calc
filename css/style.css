@@ -2,12 +2,16 @@
    margin: 0;
    padding: 0;
 }
+body {
+	background: linear-gradient(to right, #e91e63, #3f51b5);
+}
 
 .main {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%)translateY(-50%);
+	background: #607d8b;
 }
 
 .button {
@@ -15,12 +19,24 @@
 	height: 50px;
 	font-size: 25px;
 	margin: 2px;
+	border: none;
+
 }
 
-.input_field {
+.textview {
 	width: 204px;
 	margin: 5px;
 	font-size: 25px;
 	padding: 5px;
-
+	color: #607d8b;
+}
+#equal {
+	height: 106px;
+	background: #1daf1d;
+}
+#zero {
+	width: 106px;
+}
+#clean {
+	background: #ff8d00;
 }
